@@ -17,6 +17,8 @@ $(document).ready(function() {
   $(document).on("click", function(event) {
     if ($(event.target).hasClass("delete")) {
       deleteElement($(event.target).parents(".entry").attr("id"));
+    } else if ($(event.target).hasClass("green")) {
+      $(event.target).removeClass("green");
     } else if ($(event.target).hasClass("text")) {
       $(".text.green").removeClass("green");
       $(event.target).addClass("green");
